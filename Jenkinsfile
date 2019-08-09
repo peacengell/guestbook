@@ -16,7 +16,7 @@ node {
     stage('Test image') {
         
         app.inside {
-            id -a
+            sh('id -a')
             sh('/tmp/test.sh')
         }
     }
