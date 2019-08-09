@@ -33,6 +33,7 @@ node {
 
     stage('Deploying to kubernetes') {
         sh('pwd')
-       
+        sh('kubectl apply -f all-in-one/guestbook-all-in-one.yaml -n deployment')
+        sh('kubectl get po -n deployment')
     }
 }
