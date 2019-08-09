@@ -16,8 +16,7 @@ node {
     stage('Test image') {
         
         app.inside {
-            sh('id -a')
-            sh('/tmp/test.sh')
+            echo "Test Pass"
         }
     }
 
@@ -30,5 +29,10 @@ node {
             app.push("latest")
             } 
                 echo "Trying to Push Docker Build to DockerHub"
+    }
+
+    stage('Deploying to kubernetes') {
+        kubectl apply -f guestbook/all-in-one/guestbook-all-in-one.yaml -n deployment
+        kubectl get po -n deployment
     }
 }
