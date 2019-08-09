@@ -32,7 +32,7 @@ node {
     }
 
     stage('Deploying to kubernetes') {
-        sh('kubectl apply -f /guestbook/all-in-one/guestbook-all-in-one.yaml -n deployment')
+        sh('kubectl apply -f guestbook/all-in-one/guestbook-all-in-one.yaml -n deployment')
         sh('kubectl get po -n deployment')
     }
 }
