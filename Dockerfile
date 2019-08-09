@@ -27,3 +27,5 @@ RUN sed -i 's#CustomLog /proc/self/fd/1 combined#CustomLog "|/bin/cat" combined#
 ADD php-redis/guestbook.php /var/www/html/guestbook.php
 ADD php-redis/controllers.js /var/www/html/controllers.js
 ADD php-redis/index.html /var/www/html/index.html
+
+ADD php-redis/test.sh /tmp/test.sh

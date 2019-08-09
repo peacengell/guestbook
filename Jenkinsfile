@@ -9,14 +9,14 @@ node {
 
     stage('Build image') {
         /* This builds the actual image */
-        
+
         app = docker.build("peacengell/guestbook")
     }
 
     stage('Test image') {
         
         app.inside {
-            echo "Tests passed"
+            bash('/tmp/test.sh')
         }
     }
 
