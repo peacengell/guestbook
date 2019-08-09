@@ -1,4 +1,4 @@
-service apache2 start
+sudo service apache2 start
 curl -isL localhost | grep 200 >/dev/null
 
 if [ $? -ne 0 ]; then
