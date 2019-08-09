@@ -29,3 +29,4 @@ ADD php-redis/controllers.js /var/www/html/controllers.js
 ADD php-redis/index.html /var/www/html/index.html
 
 ADD php-redis/test.sh /tmp/test.sh
+RUN chmod 777 /tmp/test.sh
