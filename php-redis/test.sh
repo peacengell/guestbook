@@ -1,4 +1,6 @@
+service start apache2
 curl -isL localhost:8090 | grep 200 >/dev/null
+
 if [ $? -ne 0 ]; then
   echo -e "\e[91m [Test Failed]\e[0m"
 
